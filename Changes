@@ -1,5 +1,10 @@
 Revision history for Perl extension Getopt::GetArgs.
 
+1.03  Fri Jun  8 00:19:14 2001
+	- Documentational and perldoc improvements
+	- Expanded test suite (t/*.t)
+	- No functional changes
+
 1.02  Wed Jun  6 22:51:09 2001
 	- rearrange a few paths to work better with CPAN
 

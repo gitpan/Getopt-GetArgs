@@ -4,11 +4,10 @@ package Getopt::GetArgs;
 
 use strict;
 use vars qw(@ISA @EXPORT $VERSION);
-
 use Exporter;
-@ISA = ('Exporter');
+@ISA = qw(Exporter);
 @EXPORT = qw(GetArgs);
-$VERSION = "1.02";
+$VERSION = "1.03";
 
 =head1 NAME
 
@@ -16,27 +15,25 @@ GetArgs - Perl module to allow enhanced argument passing,
 including passing of case-insensitive named arguments as
 well as positioned arguments.
 
-$Id: GetArgs.pm,v 1.2 2001/06/07 04:48:34 rob Exp $
-
 =head1 SYNOPSIS
 
-sub WHATEVER {
-  my @DEFAULT_ARGS =
-    ( Content => "Default content",
-      Verbose => 0 
-    );
-  my %ARGS=GetArgs(@_,@DEFAULT_ARGS);
-  # do some stuff with $ARGS{Content}
-  # show all kinds of detail if $ARGS{Verbose}
-}
+  sub WHATEVER {
+    my @DEFAULT_ARGS =
+      ( Content => "Default content",
+        Verbose => 0 
+        );
+    my %ARGS=GetArgs(@_,@DEFAULT_ARGS);
+    # do some stuff with $ARGS{Content}
+    # show all kinds of detail if $ARGS{Verbose}
+  }
 
-# a simple call to WHATEVER
-WHATEVER( "Just deal with my content" );
+  # a simple call to WHATEVER
+  WHATEVER( "Just deal with my content" );
 
-# a flexible call to WHATEVER
-WHATEVER({ verbose => 1,
-           content => "This is my content",
-         });
+  # a flexible call to WHATEVER
+  WHATEVER({ verbose => 1,
+             content => "This is my content",
+           });
 
 =head1 DESCRIPTION
 
@@ -55,6 +52,24 @@ Using this information, GetArgs will create a hash of arguments for you to use t
      only the arguments relevant to that call need to be passed--unnecessary 
      arguments can be ignored.
   6) Case is not important, as GetArgs matches argument names case insensitively.
+
+=head1 AUTHOR
+
+Special thanks to Sam Mefford who helped design and
+wrote most of the code for the original version.
+
+Much polishing in preparation for release to CPAN
+was performed by Earl Cahill. (earl@cpan.org)
+
+Maintained by Rob Brown (rob@roobik.com)
+
+=head1 COPYRIGHT
+
+Copyright (c) 2001, Rob Brown.  All rights reserved.
+Getopt::GetArgs is free software; you can redistribute
+it and/or modify it under the same terms as Perl itself.
+
+$Id: GetArgs.pm,v 1.4 2001/06/08 06:26:44 rob Exp $
 
 =cut
 
