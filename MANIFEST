@@ -1,5 +1,5 @@
 Changes
 MANIFEST
 Makefile.PL
-Getopt/GetArgs.pm
+lib/Getopt/GetArgs.pm
 test.pl

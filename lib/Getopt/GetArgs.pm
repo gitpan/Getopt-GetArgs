@@ -8,7 +8,7 @@ use vars qw(@ISA @EXPORT $VERSION);
 use Exporter;
 @ISA = ('Exporter');
 @EXPORT = qw(GetArgs);
-$VERSION = "1.01";
+$VERSION = "1.02";
 
 =head1 NAME
 
@@ -16,7 +16,7 @@ GetArgs - Perl module to allow enhanced argument passing,
 including passing of case-insensitive named arguments as
 well as positioned arguments.
 
-$Id: GetArgs.pm,v 1.1 2001/06/05 02:10:47 rob Exp $
+$Id: GetArgs.pm,v 1.2 2001/06/07 04:48:34 rob Exp $
 
 =head1 SYNOPSIS
 
@@ -38,7 +38,7 @@ WHATEVER({ verbose => 1,
            content => "This is my content",
          });
 
-=head1 DESCIPTION
+=head1 DESCRIPTION
 
 GetArgs needs to know 
   * what your subroutine was passed, 
